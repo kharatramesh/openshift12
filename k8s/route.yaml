@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: web
+  name: web
+spec:
+  port:
+    targetPort: 80-tcp
+  to:
+    kind: Service
+    name: web
+    weight: 100
