@@ -15,10 +15,10 @@ spec:
         app: web
     spec:
       containers:
-        - image: docker.io/httpd:latest
+        - image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
           imagePullPolicy: Always
           name: c1
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP
             
